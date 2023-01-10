@@ -22,7 +22,9 @@ require_once 'controller.php';
 
 
     <div class="container">
-      <h1>Contact</h1>
+      <div class="title">
+      <h1>Contact</h1><img src="assets/img/nvidia.png" alt="">
+      </div>
 
       <form action="" method="post">
 
@@ -103,6 +105,7 @@ require_once 'controller.php';
 
   <footer>
     <a href="#">Mentions légales</a>
+    <a href="#">© Nvidia</a>
   </footer>
 
 </body>
