@@ -55,13 +55,13 @@ require_once 'controller.php';
         </div>
 
         <div>
-          <label for="reseau">Objet: <span><?= isset($errors['reseau']) ? $errors['reseau'] : '' ?></span></label>
+          <label for="reseau">Objet: </label>
           <select name="reseau" id="reseau">
-            <option value="">--Comment avez vous connu le site--</option>
+            <option>--Comment avez vous connu le site-- </option>
             <?php foreach ($reseau as $key => $val) { ?>
               <option value="<?= $key + 1 ?>" <?= isset($_POST['reseau']) && $_POST['reseau'] == $key +1 ? 'selected' : '' ?>><?= $val ?></option>
             <?php } ?>
-          </select>
+          </select><span><?= isset($errors['reseau']) ? $errors['reseau'] : '' ?></span>
         </div>
 
         <div>
@@ -71,7 +71,7 @@ require_once 'controller.php';
 
         <div>
           <label for="confirmPass">Confirmer le mot de passe: </label>
-          <input type="password" name="confirmPass" id="confirmPass"><span><?= isset($errors['confirmPass']) ? $errors['confirmPass'] : '' ?></span>
+          <input type="password" name="confirmPass" id="confirmPass"><span><?= isset($errors['confirmPass']) ? $errors['confirmPass'] : '' ?><?= isset($errors['error']) ? $errors['error'] : '' ?></span>
         </div>
 
 
@@ -80,8 +80,8 @@ require_once 'controller.php';
 
 
         <div>
-          <input type="checkbox" id="CGU" name="CGU"><span><?= isset($errors['CGU']) ? $errors['CGU'] : '' ?></span>
-          <label class="check" for="CGU">J'accepte les CGU</label>
+          <input type="checkbox" id="CGU" name="CGU">
+          <label class="check" for="CGU">J'accepte les CGU</label><span><?= isset($errors['CGU']) ? $errors['CGU'] : '' ?></span>
         </div>
 
 

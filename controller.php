@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (isset($_POST['password'])) {
         if (empty($_POST['password'])) {
-            $errors['password'] = 'champs obligatoire';
+            $errors['password'] = 'champ obligatoire';
         }
         else if (!preg_match('/^.{8,}$/', $_POST['password'])) {
             $errors['password'] = '8 caractères minimum';
@@ -85,8 +85,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     if (isset($_POST['confirmPass'])) {
+        if ($_POST['password'] != $_POST['confirmPass']){
+            $errors['error'] = 'les mots de passe ne sont pas identique';
+        }
         if (empty($_POST['confirmPass'])) {
-            $errors['confirmPass'] = 'c\'est vide';
+            $errors['confirmPass'] = 'champ obligatoire';
         }
         else if (!preg_match('/^.{8,}$/', $_POST['confirmPass'])) {
             $errors['password'] = 'Veuillez respecter le format';
