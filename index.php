@@ -23,7 +23,7 @@ require_once 'controller.php';
 
     <div class="container">
       <div class="title">
-      <h1>Contact</h1><img src="assets/img/nvidia.png" alt="">
+      <h1>Contact</h1><img src="assets/img/nvidia.png" alt="logo nvidia">
       </div>
 
       <form action="" method="post">
